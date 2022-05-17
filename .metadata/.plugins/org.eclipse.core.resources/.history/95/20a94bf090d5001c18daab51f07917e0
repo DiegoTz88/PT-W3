@@ -1,0 +1,87 @@
+import java.util.Arrays;
+
+public class java_week_3_codingChallenge {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//1. Array for integer ages
+		int[] ages = new int[8];
+		ages[0] = 3;
+		ages[1] = 9;
+		ages[2] = 23;
+		ages[3] = 64;
+		ages[4] = 2;
+		ages[5] = 8;
+		ages[6] = 28;
+		ages[7] = 93;
+		
+		//1.a method for subtracting first value from last value
+		System.out.println(subFirstLast(ages));
+		
+		//1.c method for calculating average ages
+		System.out.println(calcAvg(ages));
+		
+		//2. Array for String names
+		String[] names = new String[6];
+		names[0] = "Sam";
+		names[1] = "Tommy";
+		names[2] = "Tim";
+		names[3] = "Sally";
+		names[4] = "Buck";
+		names[5] = "Bob";
+		
+		//2.a Calculating average number of letters per name
+		int avgs = 0;
+		int total = 0;
+		for(int i = 0; i < names.length; i++) {
+			total += names[i].length();
+		}
+		avgs = total / names.length;
+		System.out.println(avgs);
+		
+		//2.b
+		String result = "";
+		for(int i = 0; i < names.length; i++) {
+			result += names[i] + " ";
+		}
+		System.out.println(result);
+		
+		
+		/*3.	How do you access the last element of any array?
+		 * 		numbers[numbers.length-1];
+		 * 
+		 *4.	How do you access the first element of any array?
+		 *		numbers[0];
+		 */
+		
+		//5. Declaring array called nameLengths
+		int n = names.length;
+		
+		int[] nameLengths = new int[n];
+		for(int i = 0; i < n; i++) {
+			nameLengths[i] = names[i].length();
+		}
+		System.out.println(Arrays.toString(nameLengths));
+	}
+	
+	public static int subFirstLast(int[] numbers) {
+		int sub = 0;
+		sub = numbers[numbers.length-1] - numbers[0];
+		return sub;
+		
+	}
+	
+	public static int calcAvg(int[] num) {
+		int avg = 0;
+		int total = 0;
+		for(int i = 0; i < num.length; i++) {
+			total += num[i];
+		}
+		avg = total/num.length;
+		return avg;
+	}
+	
+	
+
+}

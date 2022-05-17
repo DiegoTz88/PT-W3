@@ -1,0 +1,45 @@
+
+public class java_week_3_codingChallenge {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Array for ages
+		int[] ages = new int[8];
+		ages[0] = 3;
+		ages[1] = 9;
+		ages[2] = 23;
+		ages[3] = 64;
+		ages[4] = 2;
+		ages[5] = 8;
+		ages[6] = 28;
+		ages[7] = 93;
+		
+		//method for subtracting first value from last value
+		System.out.println(subFirstLast(ages));
+		
+		//method for calculating average ages
+		System.out.println(calcAvg(ages));
+		
+		//Array
+		
+	}
+	
+	public static int subFirstLast(int[] numbers) {
+		int sub = 0;
+		sub = numbers[numbers.length-1] - numbers[0];
+		return sub;
+		
+	}
+	
+	public static int calcAvg(int[] num) {
+		int avg = 0;
+		int total = 0;
+		for(int i = 0; i <= num.length; i++) {
+			total += num[i];
+		}
+		avg = total/num.length;
+		return avg;
+	}
+
+}

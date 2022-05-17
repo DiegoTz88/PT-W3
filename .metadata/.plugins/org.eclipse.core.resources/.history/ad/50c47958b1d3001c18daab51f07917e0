@@ -1,0 +1,19 @@
+
+public class codeAlong {
+
+	public static void main(String[] args) {
+		String[] students = new String[3];
+		
+		students[0] = "Tom String";
+		students[1] = "dieo";
+		students[2] = "kevin";
+		
+		for( int i = 0; i < students.length(); i++) {
+			System.out.println(students[i]);
+		}
+		
+		for(String student : students) {
+			System.out.println(student);
+		}
+	}
+}
